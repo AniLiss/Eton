@@ -7,6 +7,7 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync').create();
 var rename = require('gulp-rename');
+var minify = require('gulp-csso');
 var runSequence = require('gulp-run-sequence');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
