@@ -7,6 +7,7 @@
     "browser-sync": "2.18.2",
     "css-mqpacker": "^5.0.1",
     "gulp": "3.9.1",
+    "gulp-csso": "^2.0.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",
     "gulp-rename": "^1.2.2",
@@ -14,6 +15,7 @@
     "gulp-sass": "2.3.2",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
+    "stylelint": "^7.7.1",
     "svgstore": "^2.0.2"
   },
   "scripts": {
