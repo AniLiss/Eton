@@ -1,11 +1,13 @@
 body,
-p {
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Gotham Pro Black', sans-serif;
+  font-family: $base-font;
   background-color: #242426;
   width: 1435px;
   color: #fff;
@@ -30,4 +32,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.accent-color {
+  color: $accent-color;
 }
