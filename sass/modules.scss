@@ -27,12 +27,12 @@ header {
 }
 
 main {
-  padding-top: 115px;
+  padding-top: 150px;
 }
 
 .slider {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   .slider-wrapper {
     display: flex;
@@ -42,6 +42,7 @@ main {
 
 .slide {
   width: 100vw;
+  height: 100vh;
 
   .about {
     width: 45%;
@@ -49,15 +50,46 @@ main {
     p {
       font-family: $light-font;
       width: 80%;
-      line-height: (27px/18px)*1em; //25.5px;
+      line-height: 25.5px;
       padding-bottom: 20px;
+      font-size: 18px;
     }
   }
 }
 
 .slide-title {
   font-size: 66px;
-  line-height: (115px/112px)*1em;
+  //line-height: 115px;
+  width: 50%;
+
+  &--projects,
+  &--technologies {
+    width: 30%;
+  }
+
+  &--contacts {
+    font-size: 41px;
+    width: 25%;
+  }
+}
+
+.slide-description {
+  padding-top: 165px;
+  font-size: 28px;
+  display: flex;
+
+  &--about {
+    width: 34%;
+  }
+
+  li {
+    padding-bottom: 40px;
+  }
+}
+
+.slide-column {
+  width: 30%;
+  padding-right: 115px;
 }
 
 .page-menu {
@@ -98,6 +130,72 @@ main {
       position: absolute;
       background-color: #fff;
       left: -5%;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+}
+
+form {
+  button {
+    padding: 17px 25px;
+    font-size: 10px;
+    color: #8b8b8c;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 2px #8b8b8c;
+    font-family: $base-font;
+  }
+}
+
+.contacts-list {
+  font-family: $light-font;
+  width: 25%;
+  padding-right: 60px;
+
+  li {
+    padding-bottom: 20px;
+  }
+
+  address {
+    font-style: normal;
+  }
+}
+
+.form-list {
+  li {
+    padding-bottom: 40px;
+
+    textarea {
+      display: inline;
+
+      &::-webkit-input-placeholder {
+        vertical-align: text-bottom;
+        vertical-align: bottom;
+      }
+
+      &::-moz-placeholder {
+        vertical-align: text-bottom;
+        vertical-align: bottom;
+      }
+    }
+
+    input,
+    textarea {
+      background-color: #242426;
+      border: none;
+      border-bottom: 2px solid #8b8b8c;
+      color: #8b8b8c;
+      width: 295px;
+      font-family: $light-font;
+      font-size: ;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
