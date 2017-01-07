@@ -212,6 +212,10 @@ form {
       bottom: 55px;
     }
 
+    textarea:focus + span {
+      display: none;
+    }
+
     input,
     textarea {
       background-color: #242426;
@@ -225,12 +229,6 @@ form {
       &:focus {
         outline: none;
       }
-    }
-  }
-
-  textarea:focus {
-    .hide {
-      display: none;
     }
   }
 }
