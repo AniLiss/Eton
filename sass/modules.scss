@@ -202,20 +202,14 @@ form {
 .form-list {
   li {
     padding-bottom: 40px;
+    position: relative;
 
-    textarea {
-      display: inline;
-      resize: none;
-
-      &::-webkit-input-placeholder {
-        vertical-align: text-bottom;
-        vertical-align: bottom;
-      }
-
-      &::-moz-placeholder {
-        vertical-align: text-bottom;
-        vertical-align: bottom;
-      }
+    span {
+      color: #8b8b8c;
+      font-family: $light-font;
+      font-size: 13px;
+      position: absolute;
+      bottom: 55px;
     }
 
     input,
@@ -231,6 +225,12 @@ form {
       &:focus {
         outline: none;
       }
+    }
+  }
+
+  textarea:focus {
+    .hide {
+      display: none;
     }
   }
 }
