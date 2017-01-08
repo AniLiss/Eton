@@ -38,6 +38,7 @@
                         <h1>Technologies of the new <span class='accent-color'>opportunities.</span></h1>
                         <p>Etton is an IT company, the software developer, the provider of the IT and consulting
                             solutions.</p>
+                        <!-- Какие-то странные переносы в текстах ниже. Смысла у них никакого, хочется их убрать, чтобы в одну строку было: <p>текст</p>. Проверь везде, ниже в коде еще такое встречается -->
                         <p>The company specializes in providing business and industrial solutions, as well as creating
                             the
                             platforms
@@ -84,10 +85,12 @@
                     </div>
                 </div>
             </section>
-
+            
+            <!-- Вся эта секция сейчас слишком длинная. Между карточками кейсов должно быть конкретное расстояние, получается просто удлиненная секция с шириной auto, а у тебя эта секция равна "кол-во слайдов * 100vw" -->
             <section class='slide'>
                 <div class='projects-list'>
                     <a href="">
+                        <!-- Контейнер нужен общий внутри слайда, а не внутри каждого кейса -->
                         <div class='container'>
                             <div class='project-item project-item--inform-system'>
                                 <h3 class='project-intro'>The information and analytical system “The open budget for
@@ -99,6 +102,7 @@
                     <a href="">
                         <div class='container'>
                             <div class='project-item project-item--winter-games'>
+                                <!-- Надпись зря закомментировала. Она должна скрываться средствами CSS и появляться, если у карточки кейса есть класс "active", который будет появляться во время скролла -->
                                 <!--<h3 class='project-intro'>The III Winter Military World Games</h3>-->
                             </div>
                         </div>
@@ -116,6 +120,7 @@
 
             <section class='slide'>
                 <div class='container'>
+                    <!-- Сложно как-то. Почему бы не добавить необходимые классы непосредственно к section, а внутри контейнера оставить только h2? -->
                     <div class='slide-title slide-title--technologies'>
                         <h2>the technologies</h2>
                     </div>
@@ -125,6 +130,7 @@
             <section class='slide'>
                 <div class='container'>
                     <ul class='slide-description'>
+                        <!-- Некорректная структура. Единственным возможным ребенком <ul> может быть <li>. Сделай эти колонки через CSS3-columns. <li> надо будет сделать inline-block или block -->
                         <div class='slide-column'>
                             <li>Our own platform for the work with <span class='accent-color'>Big Data</span> (the
                                 automation of data collection,
@@ -151,6 +157,7 @@
             <section class='slide'>
                 <div class='container'>
                     <ul class='slide-description'>
+                        <!-- Аналогичный коммент про CSS3-columns -->
                         <div class='slide-column'>
                             <li><span class='accent-color'>Video 360º technology</span> (the technology provides a 360º
                                 video visualization)
@@ -214,7 +221,9 @@
                                 <a href='tel:+78001000815' class='tel'>+7 800 100-08-15</a>
                             </li>
                         </ul>
+                        <!-- Нет action и method -->
                         <form>
+                            <!-- Тут уже говорил — убираем ul и li, они не нужны -->
                             <ul class='form-list'>
                                 <li>
                                     <input id='first-name' name='first-name' type='text' placeholder='Your name'>
