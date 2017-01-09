@@ -7,7 +7,8 @@ li {
 }
 
 body {
-  font-family: $base-font;
+  font-family: 'GothamProBlack', 'Arial', sans-serif;
+  //font-family: $base-font;
   background-color: #242426;
   width: 1435px;
   color: #fff;
@@ -18,7 +19,7 @@ ul {
 }
 
 a {
-  transition:all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   text-decoration: none;
   color: #fff;
 }
