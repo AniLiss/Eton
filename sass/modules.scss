@@ -19,7 +19,6 @@
 
 header {
   position: fixed;
-  background-color: #242426;
 
   .container {
     padding: 45px 80px;
@@ -62,7 +61,7 @@ main {
   //line-height: 115px;
   width: 50%;
 
-  &--projectslist,
+  &--projects,
   &--technologies {
     width: 30%;
   }
@@ -90,6 +89,10 @@ main {
 .slide-column {
   width: 30%;
   padding-right: 115px;
+
+  p {
+    margin-bottom: 40px;
+  }
 }
 
 .page-menu {
@@ -134,23 +137,34 @@ main {
   }
 }
 
+.container {
+  &--projects {
+    width: auto;
+  }
+}
+
 .contacts,
 .projects-list {
   display: flex;
 }
 
 .projects-list {
-  flex-direction: row;
+  width: auto;
 }
 
 .project-intro {
   font-size: 55px;
   width: 45%;
   line-height: 65px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
 }
 
 .project-item {
-  width: 1380px;
+  width: 1000px;
   height: 370px;
   display: flex;
   background-size: 670px 380px;
@@ -241,7 +255,6 @@ footer {
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  background-color: #242426;
 }
 
 .progess-bar {
