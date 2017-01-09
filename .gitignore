@@ -9,3 +9,5 @@ css/*.css
 node_modules/
 Thumbs.db
 build/
+package.json
+package.json
