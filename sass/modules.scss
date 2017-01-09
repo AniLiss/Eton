@@ -98,6 +98,11 @@ main {
   font-size: 28px;
   display: flex;
 
+  &:before {
+    content: "\007C\00a0\00a0";
+    display: block;
+  }
+
   &--figures {
     width: 34%;
   }
@@ -185,6 +190,7 @@ main {
   width: 62%;
   line-height: 65px;
   display: none;
+  font-family: $base-font;
 
   &--active {
     display: block;
@@ -232,115 +238,113 @@ main {
 
 .project-result {
   width: 20%;
-}
 
-.project-description {
-  width: 65%;
-  padding-top: 25px;
-}
-
-.pop-up-images {
-  margin: 0 auto;
-  margin-top: 55px;
-
-  img {
-    width: 970px;
-    padding-bottom: 20px;
-  }
-}
-
-.project-result {
-  display: flex;
-  flex-direction: column;
-}
-
-form {
-  button {
-    padding: 17px 25px;
-    font-size: 11px;
-    color: #8b8b8c;
-    text-transform: uppercase;
-    background-color: transparent;
-    cursor: pointer;
-    font-family: $base-font;
-    letter-spacing: 4px;
-    float: right;
-    border: none;
-    outline: 2px solid #8b8b8c;
-  }
-}
-
-.contacts-list {
-  font-family: $light-font;
-  width: 25%;
-  padding-right: 60px;
-
-  li {
-    padding-bottom: 20px;
+  b {
+    display: block;
   }
 
-  address {
-    font-style: normal;
+  .project-description {
+    width: 65%;
+    padding-top: 25px;
   }
-}
 
-.form-list {
-  li {
-    padding-bottom: 40px;
-    position: relative;
+  .pop-up-images {
+    margin: 0 auto;
+    margin-top: 55px;
 
-    span {
+    img {
+      width: 970px;
+      padding-bottom: 20px;
+    }
+  }
+
+  form {
+    button {
+      padding: 17px 25px;
+      font-size: 11px;
       color: #8b8b8c;
-      font-family: $light-font;
-      font-size: 13px;
-      position: absolute;
-      bottom: 55px;
-    }
-
-    textarea:focus + span {
-      display: none;
-    }
-
-    input,
-    textarea {
-      background-color: #242426;
+      text-transform: uppercase;
+      background-color: transparent;
+      cursor: pointer;
+      font-family: $base-font;
+      letter-spacing: 4px;
+      float: right;
       border: none;
-      border-bottom: 2px solid #8b8b8c;
-      color: #8b8b8c;
-      width: 295px;
-      font-family: $light-font;
-      font-size: 13px;
+      outline: 2px solid #8b8b8c;
+    }
+  }
 
-      &:focus {
-        outline: none;
+  .contacts-list {
+    font-family: $light-font;
+    width: 25%;
+    padding-right: 60px;
+
+    li {
+      padding-bottom: 20px;
+    }
+
+    address {
+      font-style: normal;
+    }
+  }
+
+  .form-list {
+    li {
+      padding-bottom: 40px;
+      position: relative;
+
+      span {
+        color: #8b8b8c;
+        font-family: $light-font;
+        font-size: 13px;
+        position: absolute;
+        bottom: 55px;
+      }
+
+      textarea:focus + span {
+        display: none;
+      }
+
+      input,
+      textarea {
+        background-color: #242426;
+        border: none;
+        border-bottom: 2px solid #8b8b8c;
+        color: #8b8b8c;
+        width: 295px;
+        font-family: $light-font;
+        font-size: 13px;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
-}
 
-footer {
-  position: fixed;
-  bottom: 0;
-  padding: 30px 0;
-  border-top: 1px solid #565658;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+  footer {
+    position: fixed;
+    bottom: 0;
+    padding: 30px 0;
+    border-top: 1px solid #565658;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 
-  a {
-    opacity: 0.3;
+    a {
+      opacity: 0.3;
 
-    &:hover {
-      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
-}
 
-.progess-bar {
-  bottom: 100%;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  width: 20%;
-  border-top: 1px solid #89898a;
-}
+  .progess-bar {
+    bottom: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    width: 20%;
+    border-top: 1px solid #89898a;
+  }
