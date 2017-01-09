@@ -14,6 +14,7 @@
     position: relative;
     bottom: 15px;
     left: 55px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -106,7 +107,7 @@ main {
   li {
     letter-spacing: 4px;
     text-transform: uppercase;
-    padding-right: 70px;
+    margin-right: 70px;
     //font-size: (10px/152px)*1em;
     font-size: 11px;
 
@@ -117,6 +118,10 @@ main {
 
   a {
     color: #63636c;
+
+    &:hover {
+      opacity: 0.1;
+    }
   }
 
   .active {
@@ -127,12 +132,12 @@ main {
       content: "";
       display: block;
       height: 1px;
-      width: 110%;
+      width: 100%;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       top: 35%;
       position: absolute;
       background-color: #fff;
-      left: -5%;
+      transform: scale3d(1, 1, 1);
     }
   }
 }
@@ -154,7 +159,7 @@ main {
 
 .project-intro {
   font-size: 55px;
-  width: 45%;
+  width: 62%;
   line-height: 65px;
   display: none;
 
@@ -172,7 +177,12 @@ main {
 
   &--inform-system {
     background-image: url('../img/img-first-project.jpg');
-    background-position-x: 18%;
+    background-position-x: 39%;
+    background-size: 675px;
+
+    &:hover {
+      background-size: 685px;
+    }
   }
 
   &--winter-games {
@@ -192,10 +202,11 @@ form {
     text-transform: uppercase;
     background-color: transparent;
     cursor: pointer;
-    outline: 2px #8b8b8c;
     font-family: $base-font;
     letter-spacing: 4px;
     float: right;
+    border: none;
+    outline: 2px solid #8b8b8c;
   }
 }
 
@@ -255,6 +266,14 @@ footer {
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 4px;
+
+  a {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .progess-bar {

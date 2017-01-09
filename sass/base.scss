@@ -5,10 +5,10 @@ li {
   margin: 0;
   padding: 0;
 }
-
-h1 {
-  font-size: 55px;
-}
+//
+//h1 {
+//  font-size: 55px;
+//}
 
 body {
   font-family: $base-font;
@@ -30,6 +30,7 @@ a {
   width: 100vw;
   padding: 0 80px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .wrapper {
