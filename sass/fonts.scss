@@ -1,24 +1,3 @@
-/* font-family должен быть одинаковым везде, где используется одно семейство шрифтов.
-
-Для Gotham Pro font-family: "Gotham Pro"
-
-Тот или иной шрифт выбирается через font-weight. Font-weight для каждого шрифта ты задаешь непосредственно в font-face.
-
-Стандартная раскладка font-weight для шрифтов:
-
-thin: 100
-ultralight: 200
-light: 300
-regular: 400
-medium: 500
-bold: 600
-ultra/extra bold: 700-800
-black: 900
-
-Соотвественно, для первого шрифта задаешь font-weight:900, а для второго font-weight:300
-*/
-
-
 @font-face {
   font-family: 'GothamProBlack';
   font-style: normal;
@@ -37,4 +16,14 @@ black: 900
   url('../fonts/GothamProLight.eot') format('eot'),
   url('../fonts/GothamProLight.ttf') format('ttf'),
   url('../fonts/GothamProLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GothamProMedium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('GothamProLight'),
+  url('../fonts/GothamProMedium.eot') format('eot'),
+  url('../fonts/GothamProMedium.ttf') format('ttf'),
+  url('../fonts/GothamProMedium.woff') format('woff');
 }

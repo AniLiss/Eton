@@ -4,6 +4,7 @@
   right: 80px;
   display: block;
   font-size: 13px;
+  font-family: $base-font;
 
   &::after {
     content: "";
@@ -15,6 +16,25 @@
     bottom: 15px;
     left: 55px;
     background-repeat: no-repeat;
+  }
+
+  &--left {
+    left: 80px;
+
+    &::after {
+      transform: rotate(180deg);
+      left: -70px;
+    }
+  }
+}
+
+.pop-up-nav {
+  .scroll {
+    font-family: $medium-font;
+
+    &::after {
+      bottom: 20px;
+    }
   }
 }
 
@@ -97,8 +117,6 @@ main {
 }
 
 .page-menu {
-  //flex-basis: 75%;
-
   ul {
     display: flex;
     justify-content: space-between;
@@ -140,6 +158,11 @@ main {
       transform: scale3d(1, 1, 1);
     }
   }
+}
+
+.cross {
+  display: none;
+  cursor: pointer;
 }
 
 .container {
@@ -192,6 +215,43 @@ main {
   &--skills-portal {
     background-image: url('../img/img-third-project.jpg');
   }
+}
+
+.pop-up-container {
+  padding: 0 230px;
+}
+
+.pop-up-info {
+  font-family: $light-font;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.project-result {
+  width: 20%;
+}
+
+.project-description {
+  width: 65%;
+  padding-top: 25px;
+}
+
+.pop-up-images {
+  margin: 0 auto;
+  margin-top: 55px;
+
+  img {
+    width: 970px;
+    padding-bottom: 20px;
+  }
+}
+
+.project-result {
+  display: flex;
+  flex-direction: column;
 }
 
 form {
