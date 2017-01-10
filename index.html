@@ -295,13 +295,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
     /* ###### Работа ссылок меню ###### */
-    $(".page-menu a").click(function(){
+    $(".page-menu a").click(function(event){
         $(this).parents("ul").find("a").removeClass("active");
         $(this).addClass("active");
-    });
-    
-    $(".page-menu a").click(function(event){     
-        event.preventDefault();
         $("html, body").animate({scrollLeft: $(this.hash).offset().left}, 1200);
     });
     
