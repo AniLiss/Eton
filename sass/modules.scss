@@ -4,7 +4,7 @@
   right: 80px;
   display: block;
   font-size: 13px;
-  font-weight: $base-font-weight;
+  font-family: $base-font;
 
   &::after {
     content: "";
@@ -30,7 +30,7 @@
 
 .pop-up-nav {
   .scroll {
-    font-weight: $middle-font-weight;
+    font-family: $medium-font;
 
     &::after {
       bottom: 20px;
@@ -68,7 +68,7 @@ main {
     width: 45%;
 
     p {
-      font-weight: $light-font-weight;
+      font-family: $light-font;
       width: 80%;
       line-height: 25.5px;
       padding-bottom: 20px;
@@ -189,7 +189,7 @@ main {
   width: 62%;
   line-height: 65px;
   display: none;
-  font-weight: $base-font-weight;
+  font-family: $base-font;
 
   &--active {
     display: block;
@@ -227,7 +227,7 @@ main {
 }
 
 .pop-up-info {
-  font-weight: 300;
+  font-family: $light-font;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -281,7 +281,7 @@ form {
     text-transform: uppercase;
     background-color: transparent;
     cursor: pointer;
-    font-weight: $base-font-weight;
+    font-family: $base-font;
     letter-spacing: 4px;
     float: right;
     border: none;
@@ -290,7 +290,7 @@ form {
 }
 
 .contacts-list {
-  font-weight: $light-font-weight;
+  font-family: $light-font;
   width: 25%;
   padding-right: 60px;
 
@@ -310,7 +310,7 @@ form {
 
     span {
       color: #8b8b8c;
-      font-weight: $light-font-weight;
+      font-family: $light-font;
       font-size: 13px;
       position: absolute;
       bottom: 55px;
@@ -327,7 +327,7 @@ form {
       border-bottom: 2px solid #8b8b8c;
       color: #8b8b8c;
       width: 295px;
-      font-weight: $light-font-weight;
+      font-family: $light-font;
       font-size: 13px;
 
       &:focus {
