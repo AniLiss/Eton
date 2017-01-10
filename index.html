@@ -14,11 +14,11 @@
             <img src='img/logo-etton.png' alt='' height='54' width='88'>
             <nav class='page-menu'>
                 <ul>
-                    <li><a class='active' href='#'>About us</a></li>
-                    <li><a href='#'>The company in figures</a></li>
-                    <li><a href='#'>Projects</a></li>
-                    <li><a href='#'>The technologies</a></li>
-                    <li><a href='#'>Contacts</a></li>
+                    <li><a class='active' href='#about'>About us</a></li>
+                    <li><a href='#company'>The company in figures</a></li>
+                    <li><a href='#projects'>Projects</a></li>
+                    <li><a href='#tech'>The technologies</a></li>
+                    <li><a href='#contacts'>Contacts</a></li>
                 </ul>
             </nav>
             <div class='cross'>
@@ -28,14 +28,12 @@
     </div>
 </header>
 
-<a href='#'>
-    <span class='scroll'>scroll</span>
-</a>
+<span class='scroll'>scroll</span>
 
 <main>
     <div class='slider'>
         <div class='slider-wrapper'>
-            <section class='slide'>
+            <section class='slide' id="about">
                 <div class='container'>
                     <div class='about'>
                         <h1>Technologies of the new <span class='accent-color'>opportunities.</span></h1>
@@ -51,7 +49,7 @@
                 </div>
             </section>
 
-            <section class='slide'>
+            <section class='slide' id="company">
                 <div class='container'>
                     <div class='slide-title'>
                         <h2 class='title'>the company in figures</h2>
@@ -73,7 +71,7 @@
                 </div>
             </section>
 
-            <section class='slide'>
+            <section class='slide' id="projects">
                 <div class='container'>
                     <div class='slide-title slide-title--projects'>
                         <h2>our projects</h2>
@@ -129,7 +127,7 @@
                 </div>
             </section>
 
-            <section class='slide'>
+            <section class='slide' id="tech">
                 <div class='slide-title slide-title--technologies'>
                     <h2>the technologies</h2>
                 </div>
@@ -189,7 +187,7 @@
             </section>
 
 
-            <section class='slide'>
+            <section class='slide' id="contacts">
                 <div class='container'>
                     <div class='slide-title'>
                         <h2 class='title'>contacts</h2>
@@ -289,6 +287,43 @@
         <a href='mailto:seo@etton.ru' rel='nofollow'>seo@etton.ru</a>
     </div>
 </footer>
+    
+<div class="site-backgrounds">
+    <img src="img/bg-about.jpg" data-section-bg="about"/>
+</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    /* ###### Работа ссылок меню ###### */
+    $(".page-menu a").click(function(event){
+        $(this).parents("ul").find("a").removeClass("active");
+        $(this).addClass("active");
+        $("html, body").animate({scrollLeft: $(this.hash).offset().left}, 1200);
+    });
+    
+    /* ###### Прогрессбар ###### */
+    $(window).scroll(function(){
+        var slideswidth = 0;
+        $(".slider .slide").each(function(){
+            slideswidth += $(this).outerWidth();
+        });
+        scrollPercentage = $(this).scrollLeft() / (slideswidth - $(this).width());
+        $(".progess-bar").css("transform", "scale3d("+scrollPercentage+",1,1)");
+    });
+    
+    /* ###### Работа ссылок меню при скролле ###### */
+    /*
+    $(window).scroll(function(){
+        var scroll = $(this).scrollLeft();
+        var slideswidth = 0;
+        $(".slider .slide").each(function(){
+            slideswidth += $(this).outerWidth();
+        });
+        scrollPercentage = $(this).scrollLeft() / (slideswidth - $(this).width());
+        $(".progess-bar").css("transform", "scale3d("+scrollPercentage+",1,1)");
+    });*/
+    
+</script>
 
 </body>
 </html>
