@@ -12,6 +12,23 @@
   }
 }
 
+canvas{
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .scroll {
   z-index: 70;
   position: fixed;
@@ -88,7 +105,7 @@ main {
   white-space: nowrap;
 
   .slider-wrapper {
-    height: 100%
+    height: 100%;
   }
 }
 
@@ -101,7 +118,7 @@ main {
   flex-wrap: wrap;
 
   * {
-    white-space: initial
+    white-space: initial;
   }
 
   .about {
@@ -118,7 +135,7 @@ main {
       font-size: 18px;
 
       & + p {
-        margin-top: 8px
+        margin-top: 8px;
       }
     }
   }
@@ -148,6 +165,7 @@ main {
   &::before {
     content: '\007C\00a0\00a0';
     display: block;
+    color: transparent;
   }
 
   &--figures {
@@ -334,7 +352,7 @@ form {
 
 .contacts-list {
   font-weight: 300;
-  width: 25 %;
+  width: 25%;
   padding-right: 60px;
 
   li {
