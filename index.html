@@ -33,7 +33,7 @@
 <main>
     <div class='slider'>
         <div class='slider-wrapper'>
-            <section class='slide'>
+            <section class='slide' id="about">
                 <div class='container'>
                     <div class='about'>
                         <h1>Technologies of the new <span class='accent-color'>opportunities.</span></h1>
@@ -49,7 +49,7 @@
                 </div>
             </section>
 
-            <section class='slide'>
+            <section class='slide' id="company">
                 <div class='container'>
                     <div class='slide-title'>
                         <h2 class='title'>the company in figures</h2>
@@ -71,7 +71,7 @@
                 </div>
             </section>
 
-            <section class='slide'>
+            <section class='slide' id="projects">
                 <div class='container'>
                     <div class='slide-title slide-title--projects'>
                         <h2>our projects</h2>
@@ -127,7 +127,7 @@
                 </div>
             </section>
 
-            <section class='slide'>
+            <section class='slide' id="tech">
                 <div class='slide-title slide-title--technologies'>
                     <h2>the technologies</h2>
                 </div>
@@ -187,7 +187,7 @@
             </section>
 
 
-            <section class='slide'>
+            <section class='slide' id="contacts">
                 <div class='container'>
                     <div class='slide-title'>
                         <h2 class='title'>contacts</h2>
@@ -298,6 +298,11 @@
     $(".page-menu a").click(function(){
         $(this).parents("ul").find("a").removeClass("active");
         $(this).addClass("active");
+    });
+    
+    $(".page-menu a").click(function(event){     
+        event.preventDefault();
+        $("html, body").animate({scrollLeft: $(this.hash).offset().left}, 1200);
     });
     
     /* ###### Прогрессбар ###### */
