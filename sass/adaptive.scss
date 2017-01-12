@@ -126,6 +126,7 @@
     .contacts {flex-wrap:wrap}
     .contacts-list {width:100%}
     .form-list {width:100%; margin-top:40px}
+    .form-list .success-message {font-size:14px}
 }
 
 @media (max-width:400px) {
@@ -139,4 +140,5 @@
     .project-intro {font-size:18px}
     .case-popup--nav li:last-child:after {margin-left:0}
     .case-popup--nav li:first-child:before {margin-right:0}
+    .page-menu a {display:inline-block;}
 }
