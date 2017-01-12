@@ -36,6 +36,8 @@ $(".page-menu a").click(function(event){
     $(this).parents("ul").find("a").removeClass("active");
     $(this).addClass("active");
     $("main").animate({scrollLeft: $(this.hash).position({of: ".slider-wrapper"}).left + scrollleft}, 1200, "easeInOutCubic");
+    
+    closeburger();
 });
 
 /* ###### Работа ссылки scroll ###### */
@@ -62,7 +64,7 @@ $("main").scroll(function(){
     
     /* ###### Делаем активными проекты при скролле ###### */
     $(".project-item").each(function(){            
-        if (($(this).position({of: ".slider-wrapper"}).left+scrollleft < scrollleft + $(window).width()*0.5) && ($(this).position({of: ".slider-wrapper"}).left+scrollleft > scrollleft)) {
+        if (($(this).position({of: ".slider-wrapper"}).left+scrollleft+($(this).outerWidth(true)-$(this).outerWidth()) < scrollleft + $(window).width()*0.75) && ($(this).position({of: ".slider-wrapper"}).left + ($(this).outerWidth(true)-$(this).outerWidth()) + scrollleft > scrollleft)) {
             $(this).find(".project-intro").addClass("project-intro--active");
         } else {
             $(this).find(".project-intro").removeClass("project-intro--active");
@@ -165,6 +167,7 @@ $(window).mousedown(function(e){
     y = e.pageY;
     top = $("main").scrollTop();
     left = $("main").scrollLeft();
+    window.firstscrollleft = $("main").scrollLeft();
 });
 
 $("body").mousemove(function(e){
@@ -174,6 +177,7 @@ $("body").mousemove(function(e){
         
         $("main").scrollTop(top - newY + y);    
         $("main").scrollLeft(left - newX + x);   
+        window.newscroll = $("main").scrollLeft();
         findactivelink();
     }
 });
@@ -183,8 +187,19 @@ $("body").mouseup(function(e){down = false;});
 /* ###### Открытие попапа ###### */
 window.casesamount = $("[href='#case']").length;
     
+// Scrollbar
+var checkScrollBars = function(){
+    var b = $('.case-popup .container');
+    var normalw = 0;
+    var scrollw = 0;
+    normalw = window.innerWidth;
+    scrollw = normalw - b.outerWidth();
+    $('.case-popup--nav li:last-child').css({marginRight:scrollw+'px'});
+}
+
 $("[href='#case']").click(function(event){
     event.preventDefault;
+    event.stopPropagation();
     $(".progess-bar, footer, .page-menu, header").addClass("invisible");
     
     window.activecase = $(this).index()+1;
@@ -200,7 +215,9 @@ $("[href='#case']").click(function(event){
     $(".case-popup--images").html(caseimages);    
     
     $(".case-popup").show(); 
-    setTimeout(function(){$(".case-popup").addClass("active");}, 1);
+    setTimeout(function(){$(".case-popup").addClass("active");
+         checkScrollBars();
+    }, 10);
 });
 
 /* ###### Закрытие попапа ###### */
@@ -246,3 +263,35 @@ function changecase() {
         $(".case-popup .container").removeClass("hidden");
     },350);
 }
+
+/* ###### Если мобильные, добавляем поддержку тача ###### */
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $("body").addClass("mobile");
+    $("main").scroll($.debounce( 100, function(){
+        findactivelink();
+    }));
+}
+
+////
+
+window.menuopened = false;
+
+function closeburger() {
+    $(".page-menu").removeClass("active");
+    setTimeout(function(){$(".page-menu").css("display", "none");}, 251);
+    $(".burger-menu-button").removeClass("active");
+    $(".progess-bar, footer").removeClass("invisible");
+    menuopened = false;
+}
+
+function openburger() {
+    $(".page-menu").css("display", "flex"); 
+    setTimeout(function(){$(".page-menu").addClass("active");}, 20);
+    $(".burger-menu-button").addClass("active");
+    $(".progess-bar, footer").addClass("invisible");
+    menuopened = true;
+}
+
+$(".burger-menu-button").click(function(){
+    if (!menuopened) {openburger();} else {closeburger();}
+});

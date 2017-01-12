@@ -26,6 +26,8 @@ body {
   pointer-events:none;
   font-weight:900;
   cursor:move;
+    
+  &.mobile {pointer-events:all}
 }
 
 a {pointer-events:all}
