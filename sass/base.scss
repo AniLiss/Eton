@@ -27,7 +27,9 @@ body {
   font-weight:900;
   cursor:move;
     
-  &.mobile {pointer-events:all}
+  &.mobile {pointer-events:all;
+      .slide {}
+    }
 }
 
 a {pointer-events:all}
